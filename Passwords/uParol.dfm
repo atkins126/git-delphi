@@ -1,0 +1,50 @@
+object fParol: TfParol
+  Left = 0
+  Top = 0
+  BorderIcons = [biSystemMenu]
+  BorderStyle = bsSingle
+  Caption = #1055#1072#1088#1086#1083#1100
+  ClientHeight = 224
+  ClientWidth = 583
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  Position = poScreenCenter
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Panel1: TPanel
+    Left = 0
+    Top = 183
+    Width = 583
+    Height = 41
+    Align = alBottom
+    TabOrder = 0
+    ExplicitLeft = 192
+    ExplicitTop = 175
+    ExplicitWidth = 185
+    object BitBtn1: TBitBtn
+      Left = 120
+      Top = 8
+      Width = 113
+      Height = 25
+      Caption = #1057#1086#1093#1088#1072#1085#1080#1090#1100
+      Kind = bkOK
+      NumGlyphs = 2
+      TabOrder = 0
+    end
+    object BitBtn2: TBitBtn
+      Left = 320
+      Top = 8
+      Width = 113
+      Height = 25
+      Caption = #1054#1090#1084#1077#1085#1072
+      Kind = bkCancel
+      NumGlyphs = 2
+      TabOrder = 1
+    end
+  end
+end
