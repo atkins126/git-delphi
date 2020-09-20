@@ -22,7 +22,11 @@ type
     SaveDialog1: TSaveDialog;
     fq1: TFDQuery;
     FDSQLiteSecurity1: TFDSQLiteSecurity;
+    fqPasswÎïèñàíèå: TWideMemoField;
+    fqPasswÊîä_ïàğîëÿ: TFDAutoIncField;
     procedure fc1BeforeConnect(Sender: TObject);
+    procedure fqPasswÎïèñàíèåGetText(Sender: TField; var Text: string;
+      DisplayText: Boolean);
   private
     { Private declarations }
   public
@@ -31,6 +35,8 @@ type
 
 var
   dm1: Tdm1;
+const
+ pass = '1972';
 
 implementation
 
@@ -41,6 +47,12 @@ implementation
 procedure Tdm1.fc1BeforeConnect(Sender: TObject);
 begin
 // fc1.Params.Database := ExtractFilePath( Application.ExeName ) + 'passwords.sqlite';
+end;
+
+procedure Tdm1.fqPasswÎïèñàíèåGetText(Sender: TField; var Text: string;
+  DisplayText: Boolean);
+begin
+ Text := Sender.AsString;
 end;
 
 end.

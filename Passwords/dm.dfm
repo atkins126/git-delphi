@@ -1,10 +1,11 @@
-object dm1: Tdm1
+﻿object dm1: Tdm1
   OldCreateOrder = False
   Height = 320
   Width = 435
   object fc1: TFDConnection
     Params.Strings = (
-      'DriverID=SQLite')
+      'DriverID=SQLite'
+      'Password=1972')
     BeforeConnect = fc1BeforeConnect
     Left = 55
     Top = 40
@@ -15,6 +16,18 @@ object dm1: Tdm1
       'select * from '#1055#1072#1088#1086#1083#1080)
     Left = 104
     Top = 40
+    object fqPasswКод_пароля: TFDAutoIncField
+      FieldName = #1050#1086#1076'_'#1087#1072#1088#1086#1083#1103
+      Origin = '"'#1050#1086#1076'_'#1087#1072#1088#1086#1083#1103'"'
+      ProviderFlags = [pfInWhere, pfInKey]
+      Visible = False
+    end
+    object fqPasswОписание: TWideMemoField
+      FieldName = #1054#1087#1080#1089#1072#1085#1080#1077
+      Origin = '"'#1054#1087#1080#1089#1072#1085#1080#1077'"'
+      OnGetText = fqPasswОписаниеGetText
+      BlobType = ftWideMemo
+    end
   end
   object dsPassw: TDataSource
     DataSet = fqPassw
